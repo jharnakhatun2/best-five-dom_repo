@@ -29,7 +29,7 @@
         <!-- Hero section -->
         <section class=" bg-[url('/images/header.png')] w-full h-[30rem] mx-auto relative drop-shadow-md">
             <div class="space-y-4 w-9/12 text-center mx-auto absolute top-[35%] left-[15%] overflow-hidden">
-                <h1 class="font-['Poppins'] lg:text-7xl sm:text-5xl font-bold text-orange-600 ">Choice your Top Players</h1>
+                <h1 class=" lg:text-7xl sm:text-5xl font-bold text-orange-600 ">Choice your Top Players</h1>
                 <p class=" lg:block sm:hidden md:hidden font-['Open Sans'] text-white text-lg w-2/3 mx-auto">We provide a view based on the
                     management of the cricket
                     tournaments held with different players for the tournament organizer.You can Easily add match
@@ -44,29 +44,29 @@
         <section>
             <div class="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 grid-flow-row gap-6 m-24 ">
                 <!-- Single Player Part           -->
-                <div class="max-w-sm rounded overflow-hidden shadow-lg text-white gap-6 border border-stone-600 border border-stone-600 ">
+                <div class="max-w-sm rounded overflow-hidden shadow-lg text-white gap-6 border border-stone-600">
                     <img class="w-full" src="images/1.png" alt="">
                     <div class="bg-black text-center px-6 py-3">
-                       <h3 class="text-2xl sm:text-xl sm:text-xl font-semibold">Tamim Iqbal</h3>
+                       <h3 class="text-2xl sm:text-xl font-semibold">Tamim Iqbal</h3>
                         <div class="lg:flex sm:flex-none sm:block justify-between py-5 text-slate-500 text-lg">
                             <p>Bangladesh</p>
                             <p>Batsman</p>
                         </div>
                         <button
-                            class=" w-full uppercase bg-green-500 hover:bg-green-300  py-1 mb-3 text-white font-medium text-lg">select</button>
+                            class=" w-full uppercase bg-green-500 hover:bg-green-300  py-1 mb-3 text-white font-medium text-lg" onclick="playerSelection()">select</button>
                     </div>
                 </div>
                 <!-- Single Player Part           -->
                 <div class="max-w-sm rounded overflow-hidden shadow-lg text-white gap-6 border border-stone-600">
                     <img class="w-full" src="images/2.png" alt="">
                     <div class="bg-black text-center px-6 py-3">
-                       <h3 class="text-2xl sm:text-xl sm:text-xl font-semibold">Babar Azam</h3>
+                       <h3 class="text-2xl sm:text-xl font-semibold">Babar Azam</h3>
                        <div class="lg:flex sm:flex-none sm:block justify-between py-5 text-slate-500 text-lg">
                             <p>Pakistan</p>
                             <p>Batsman</p>
                         </div>
                         <button
-                            class=" w-full uppercase bg-green-500 hover:bg-green-300  py-1 mb-3 text-white font-medium text-lg">select</button>
+                            class=" w-full uppercase bg-green-500 hover:bg-green-300  py-1 mb-3 text-white font-medium text-lg" onclick="playerSelection()">select</button>
                     </div>
                 </div>
                 <!-- Single Player Part           -->
@@ -79,22 +79,50 @@
                             <p>Batsman</p>
                         </div>
                         <button
-                            class=" w-full uppercase bg-green-500 hover:bg-green-300  py-1 mb-3 text-white font-medium text-lg">select</button>
+                            class=" w-full uppercase bg-green-500 hover:bg-green-300  py-1 mb-3 text-white font-medium text-lg" onclick="playerSelection()">select</button>
                     </div>
                 </div>
                 <!-- Selected-v Part -->
                 <div class="p-5 bg-black text-white gap-6 ">
                     <h3
-                        class="text-center text-3xl font-semibold text-orange-600 font-['Poppins'] border-b-2 border-yellow-400">
-                        Selected - V</h3>
-                    <div class="p-5">
-                        <tbody>
-                            <tr>
-                                <th>1</th>
-                                <td>Plyer - 1</td>
-                            </tr>
-                        </tbody>
-                    </div>
+                        class="text-center text-3xl font-semibold text-orange-600 font-['Poppins']">
+                        Selected - <span class="text-green-600">V</span></h3>
+                        <div class="overflow-x-auto">
+                            <table class="table w-full">
+                              <!-- head -->
+                              <thead>
+                                <tr>
+                                  <th></th>
+                                  <th>Name</th>
+                                  <th>Job</th>
+                                  <th>Favorite Color</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <!-- row 1 -->
+                                <tr>
+                                  <th>1</th>
+                                  <td>Cy Ganderton</td>
+                                  <td>Quality Control Specialist</td>
+                                  <td>Blue</td>
+                                </tr>
+                                <!-- row 2 -->
+                                <tr class="active">
+                                  <th>2</th>
+                                  <td>Hart Hagerty</td>
+                                  <td>Desktop Support Technician</td>
+                                  <td>Purple</td>
+                                </tr>
+                                <!-- row 3 -->
+                                <tr>
+                                  <th>3</th>
+                                  <td>Brice Swyre</td>
+                                  <td>Tax Accountant</td>
+                                  <td>Red</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
                 </div>
                 <!-- Single Player Part           -->
                 <div class="max-w-sm rounded overflow-hidden shadow-lg text-white gap-6 border border-stone-600">
@@ -106,7 +134,7 @@
                             <p>Batsman</p>
                         </div>
                         <button
-                            class=" w-full uppercase bg-green-500 hover:bg-green-300  py-1 mb-3 text-white font-medium text-lg">select</button>
+                            class=" w-full uppercase bg-green-500 hover:bg-green-300  py-1 mb-3 text-white font-medium text-lg" onclick="playerSelection()">select</button>
                     </div>
                 </div>
                 <!-- Single Player Part           -->
@@ -119,7 +147,7 @@
                             <p>All Rounder</p>
                         </div>
                         <button
-                            class=" w-full uppercase bg-green-500 hover:bg-green-300  py-1 mb-3 text-white font-medium text-lg">select</button>
+                            class=" w-full uppercase bg-green-500 hover:bg-green-300  py-1 mb-3 text-white font-medium text-lg" onclick="playerSelection()">select</button>
                     </div>
                 </div>
                 <!-- Single Player Part           -->
@@ -132,37 +160,35 @@
                             <p>All Rounder</p>
                         </div>
                         <button
-                            class=" w-full uppercase bg-green-500 hover:bg-green-300  py-1 mb-3 text-white font-medium text-lg">select</button>
+                            class=" w-full uppercase bg-green-500 hover:bg-green-300  py-1 mb-3 text-white font-medium text-lg" onclick="playerSelection()">select</button>
                     </div>
                 </div>
                 <!-- Budget Part -->
                 <div class="bg-black gap-6 text-white row-span-2 mb-72">
                     <div class="p-5 overflow-hidden">
-                        <h3 class="text-center text-3xl font-semibold text-orange-600 font-['Poppins'] pb-5">Budget</h3>
-                        <div class="flex justify-between">
+                        <h3 class="text-center text-2xl font-semibold text-orange-600 font-['Poppins'] pb-5">Budget</h3>
+                        <div class="flex justify-between mt-5">
                             <p>Per Player</p>
-                            <input class="w-6/12 bg-black border" type="text">
+                            <input id="per-player"class="w-6/12 bg-black border py-1 px-1" type="text">
                         </div>
-                        <button
-                            class=" w-full uppercase bg-green-500 hover:bg-green-300  py-1 my-5 text-white font-medium text-lg">select</button>
+                        <button id="calculate" class=" w-full bg-green-500 hover:bg-green-300  py-1 my-5 text-white font-medium text-lg">Calculate</button>
                         <div class="flex justify-between">
                             <p>Player Expenses</p>
-                            <p>$5000</p>
+                            <p>$ <span id="player-expenses">0000</span> </p>
                         </div>
                         <div class="flex justify-between my-5">
                             <p>Manager</p>
-                            <input class="w-6/12 bg-black border"" type="text">
+                            <input id="manager-expenses" class="w-6/12 bg-black border py-1 px-1" type="text">
                         </div>
                         <div class="flex justify-between my-5">
                             <p>Coach</p>
-                            <input class="w-6/12 bg-black border"" type="text">
+                            <input id="coach-expenses" class="w-6/12 bg-black border py-1 px-1" type="text">
                         </div>
-                        <button
-                            class=" w-full uppercase bg-green-500 hover:bg-green-300  py-1 my-5 text-white font-medium text-lg">select</button>
+                        <button id="calculate-total" class=" w-full bg-green-500 hover:bg-green-300  py-1 my-5 text-white font-medium text-lg">Calculate Total</button>
 
                         <div class="flex justify-between">
                             <p>Total</p>
-                            <p class="text-orange-600">$11000</p>
+                            <p class="text-orange-600">$<span id="total-management">0000</span></p>
                         </div>
                     </div>
 
@@ -177,7 +203,7 @@
                             <p>W-keeper</p>
                         </div>
                         <button
-                            class=" w-full uppercase bg-green-500 hover:bg-green-300  py-1 mb-3 text-white font-medium text-lg">select</button>
+                            class=" w-full uppercase bg-green-500 hover:bg-green-300  py-1 mb-3 text-white font-medium text-lg" onclick="playerSelection()">select</button>
                     </div>
                 </div>
                 <!-- Single Player Part           -->
@@ -190,7 +216,7 @@
                             <p>Batsman</p>
                         </div>
                         <button
-                            class=" w-full uppercase bg-green-500 hover:bg-green-300  py-1 mb-3 text-white font-medium text-lg">select</button>
+                            class=" w-full uppercase bg-green-500 hover:bg-green-300  py-1 mb-3 text-white font-medium text-lg" onclick="playerSelection()">select</button>
                     </div>
                 </div>
                 <!-- Single Player Part           -->
@@ -203,7 +229,7 @@
                             <p>Batsman</p>
                         </div>
                         <button
-                            class=" w-full uppercase bg-green-500 hover:bg-green-300  py-1 mb-3 text-white font-medium text-lg">select</button>
+                            class=" w-full uppercase bg-green-500 hover:bg-green-300  py-1 mb-3 text-white font-medium text-lg" onclick="playerSelection()">select</button>
                     </div>
                 </div>
             </div>
