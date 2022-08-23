@@ -6,6 +6,10 @@ document.getElementById('calculate').addEventListener('click', function () {
 
     // player Expenses
     const totalPlayerExpenses = perPlayerInputField * 5;
+    // Total player expenses validation
+    if (isNaN(totalPlayerExpenses)) {
+        return;
+    }
     setTextElementValueById('player-expenses', totalPlayerExpenses);
 });
 
@@ -15,6 +19,10 @@ document.getElementById('calculate-total').addEventListener('click', function ()
     const managerExpenses = inputFieldValueGetById('manager-expenses');
     const coachExpenses = inputFieldValueGetById('coach-expenses');
     const calculateTotalExpenses = playerTotalExpenses + managerExpenses + coachExpenses;
+    // Total Expenses validation
+    if (isNaN(calculateTotalExpenses)) {
+        return;
+    }
     setTextElementValueById('total-management', calculateTotalExpenses);
 });
 
@@ -36,7 +44,7 @@ function playerDisplay(allPlayers) {
         `;
         playersBoard.appendChild(tr);
     }
-    // console.log(allPlayers);
+
 }
 
 function playerSelection(element) {
@@ -48,16 +56,16 @@ function playerSelection(element) {
     playerArray.push(playersNameObj);
 
     // 5 players adding validation
-    if(playerArray.length > 5){
+    if (playerArray.length > 5) {
         alert('Already 5 players added. No more than 5 players!');
         return;
     }
-    
+
     // button disable validation
     element.disabled = true;
     // disabled button bg-color validation
     element.style.backgroundColor = '#86efac';
-    
+
     document.getElementById('total-added-players').innerText = playerArray.length;
     playerDisplay(playerArray);
 }

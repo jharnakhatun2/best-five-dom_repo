@@ -4,9 +4,23 @@
 function inputFieldValueGetById(inputFieldId) {
     const inputFieldValueById = document.getElementById(inputFieldId);
     const inputFieldValueString = inputFieldValueById.value;
-    const inputFieldValue = parseFloat(inputFieldValueString);
-    inputFieldValueById.value = '';
-    return inputFieldValue;
+    // Input Field Validation
+    if(isNaN(inputFieldValueString)){
+        alert('Please enter a valid number!');
+        inputFieldValueById.value = '';
+        return;
+    }
+    else if(inputFieldValueString < 0){
+        alert('Negative number is not allowed!');
+        inputFieldValueById.value = '';
+        return;
+    }
+    else{
+        const inputFieldValue = parseFloat(inputFieldValueString);
+        inputFieldValueById.value = '';
+        return inputFieldValue;
+    }
+    
 }
 
 function elementTextGetById(elementId) {
