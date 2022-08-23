@@ -41,10 +41,24 @@ function playerDisplay(allPlayers) {
 
 function playerSelection(element) {
     const playerName = element.parentNode.children[0].innerText;
+
     const playersNameObj = {
         playerName: playerName,
     }
     playerArray.push(playersNameObj);
+
+    // 5 players adding validation
+    if(playerArray.length > 5){
+        alert('Already 5 players added. No more than 5 players!');
+        return;
+    }
+    
+    // button disable validation
+    element.disabled = true;
+    // disabled button bg-color validation
+    element.style.backgroundColor = '#86efac';
+    
     document.getElementById('total-added-players').innerText = playerArray.length;
     playerDisplay(playerArray);
 }
+
