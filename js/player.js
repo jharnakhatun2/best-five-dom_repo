@@ -1,4 +1,5 @@
-// Player Total Expenses
+// Budget Calculations
+//============================
 
 document.getElementById('calculate').addEventListener('click', function () {
     const perPlayerInputField = inputFieldValueGetById('per-player');
@@ -17,13 +18,33 @@ document.getElementById('calculate-total').addEventListener('click', function ()
     setTextElementValueById('total-management', calculateTotalExpenses);
 });
 
-// Selected-V aside
-const playerArray = [];
-function playerSelection(element){
-    const playerName = element.parentNode.parentNode.children[0].innerText;
-    console.log(playerName);
-    const players = playerName;
-    playerArray.push(players);
-    console.log(playerArray);
 
+// Selected-V aside
+//=========================
+
+const playerArray = [];
+
+function playerDisplay(allPlayers) {
+    const playersBoard = document.getElementById('players-board');
+    playersBoard.innerHTML = '';
+    for (let i = 0; i < allPlayers.length; i++) {
+        const name = playerArray[i].playerName;
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+        <td>${i + 1}</td>
+        <td>${name}</td>
+        `;
+        playersBoard.appendChild(tr);
+    }
+    // console.log(allPlayers);
+}
+
+function playerSelection(element) {
+    const playerName = element.parentNode.children[0].innerText;
+    const playersNameObj = {
+        playerName: playerName,
+    }
+    playerArray.push(playersNameObj);
+    document.getElementById('total-added-players').innerText = playerArray.length;
+    playerDisplay(playerArray);
 }
